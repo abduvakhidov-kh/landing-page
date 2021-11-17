@@ -12,26 +12,48 @@ ul {
 
 a {
   text-decoration: none;
-  color: #c8c3bc;
+  color: #333333;
+}
+
+.btn {
+  border: 1px #415ef3 solid;
+  padding: 10px 15px;
+  border-radius: 20px;
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+.btn:hover {
+  background-color: #415ef3;
+  color: white;
 }
 
 .header {
-  color: #c8c3bc;
-  width: 665px;
+  color: #333;
+  padding-right: 20px;
+  padding-left: 24px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  z-index: 200;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("http://detheme.com/templates/kergan/images/bg-hero-kergan.jpg");
 }
 .header .header-nav {
+  font-family: Roboto, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header .logo {
-  margin: 1em;
+  margin: 1em 2em;
   padding: 1em;
 }
 .header .logo img {
@@ -44,6 +66,64 @@ a {
   display: flex;
 }
 .header .header-nav-list .header-nav-item {
-  padding: 1em;
-  margin: 1em;
+  padding: 16px 20px 18px;
+  font-size: 16px;
+  line-height: 1.5px;
+  cursor: pointer;
+  -webkit-transition: opacity 150ms ease;
+  transition: opacity 150ms ease;
+}
+.header .header-nav-list .header-nav-item .nav-item-link:hover {
+  color: #415ef3;
+}
+.header .header-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  max-width: 1230px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.header .header-about .header-about-container {
+  margin-top: 100px;
+}
+.header .header-about .header-about-container .about-text {
+  width: 75%;
+  margin-right: auto;
+  margin-left: 0;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.5;
+}
+.header .header-about .header-about-container .about-text-header {
+  width: 100%;
+  margin-top: 10px;
+  font-family: Montserrat, sans-serif;
+  line-height: 1.25;
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-size: 52px;
+}
+.header .header-about .header-about-container .btn-group {
+  padding: 15px;
+  margin: 10px;
+}
+.header .header-about .header-about-container .btn-group .btn-left {
+  margin-right: 10px;
+  background-color: #415ef3;
+  color: white;
+}
+.header .header-about .header-about-container .btn-group .btn-left:hover {
+  background-color: #2e48ca;
+  color: white;
+}
+.header .header-about img {
+  width: 600px;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  text-align: left;
 }

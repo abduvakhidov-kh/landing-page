@@ -1,3 +1,8 @@
+@mixin hover($bgC, $c: white) {
+  background-color: $bgC;
+  color: $c;
+}
+
 *,
 html {
   padding: 0;
@@ -10,22 +15,40 @@ ul {
 
 a {
   text-decoration: none;
-  color: #c8c3bc;
+  color: #333333;
+}
+
+.btn {
+  border: 1px #415ef3 solid;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: background-color 200ms ease;
+  &:hover {
+    @include hover(#415ef3);
+  }
 }
 
 .header {
-  color: #c8c3bc;
-  width: 665px;
+  color: #333;
+  padding-right: 20px;
+  padding-left: 24px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  z-index: 200;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("http://detheme.com/templates/kergan/images/bg-hero-kergan.jpg");
 
   .header-nav {
+    font-family: Roboto, sans-serif;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   .logo {
-    margin: 1em;
+    margin: 1em 2em;
     padding: 1em;
 
     img {
@@ -37,8 +60,65 @@ a {
     display: flex;
 
     .header-nav-item {
-      padding: 1em;
-      margin: 1em;
+      padding: 16px 20px 18px;
+      font-size: 16px;
+      line-height: 1.5px;
+      cursor: pointer;
+      transition: opacity 150ms ease;
+      .nav-item-link:hover {
+        color: #415ef3;
+      }
+    }
+  }
+  .header-about {
+    display: flex;
+    width: 90%;
+    max-width: 1230px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+
+    .header-about-container {
+      margin-top: 100px;
+      .about-text {
+        width: 75%;
+        margin-right: auto;
+        margin-left: 0;
+        font-size: 16px;
+        text-align: left;
+        line-height: 1.5;
+      }
+
+      .about-text-header {
+        width: 100%;
+        margin-top: 10px;
+        font-family: Montserrat, sans-serif;
+        line-height: 1.25;
+        font-weight: 800;
+        margin-bottom: 10px;
+        font-size: 52px;
+      }
+
+      .btn-group {
+        padding: 15px;
+        margin: 10px;
+        .btn-left {
+          margin-right: 10px;
+          background-color: #415ef3;
+          color: white;
+          &:hover {
+            @include hover(#2e48ca);
+          }
+        }
+      }
+    }
+    img {
+      width: 600px;
+      max-width: 100%;
+      vertical-align: middle;
+      display: inline-block;
+      text-align: left;
     }
   }
 }
