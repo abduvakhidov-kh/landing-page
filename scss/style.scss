@@ -1,0 +1,44 @@
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #c8c3bc;
+}
+
+.header {
+  color: #c8c3bc;
+  width: 665px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("http://detheme.com/templates/kergan/images/bg-hero-kergan.jpg");
+
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo {
+    margin: 1em;
+    padding: 1em;
+
+    img {
+      width: 160px;
+      height: 32px;
+    }
+  }
+  .header-nav-list {
+    display: flex;
+
+    .header-nav-item {
+      padding: 1em;
+      margin: 1em;
+    }
+  }
+}
