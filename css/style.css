@@ -31,11 +31,6 @@ a {
   color: #333;
   padding-right: 20px;
   padding-left: 24px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  z-index: 200;
   width: 100vw;
   min-height: 100vh;
   background-image: url("http://detheme.com/templates/kergan/images/bg-hero-kergan.jpg");
@@ -126,4 +121,127 @@ a {
   vertical-align: middle;
   display: inline-block;
   text-align: left;
+}
+
+.about {
+  background: #b3629e;
+  background: -webkit-gradient(linear, left bottom, left top, from(#b3629e), to(#415ef2));
+  background: linear-gradient(0deg, #b3629e 0%, #415ef2 100%);
+  font-family: Roboto, sans-serif;
+  padding: 10px;
+  color: white;
+}
+.about .sponsors {
+  width: 100%;
+  height: 10em;
+}
+.about .sponsors-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px auto;
+  padding: 20px;
+}
+.about .sponsors-item img {
+  width: 100px;
+}
+
+.about-item {
+  height: 41%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 2em;
+}
+.about-item h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+.about-item .about-img {
+  height: 470px;
+  width: 470px;
+  padding: 1em;
+}
+.about-item .about-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 500px;
+  height: 500px;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.about-item .about-heading {
+  margin-bottom: 10px;
+}
+.about-item .more-btn {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.advantage {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.advantage .advantage-img {
+  width: 64px;
+  height: 70px;
+}
+.advantage .advantage-text {
+  width: 90%;
+  margin-bottom: 10px;
+}
+.advantage h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 23px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.advantage-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.about-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-item .about-text .about-heading p {
+  width: 80%;
 }
