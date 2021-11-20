@@ -6,6 +6,10 @@ html {
           box-sizing: border-box;
 }
 
+body {
+  font-family: Roboto, sans-serif;
+}
+
 ul {
   list-style: none;
 }
@@ -244,4 +248,98 @@ a {
 
 .about-item .about-text .about-heading p {
   width: 80%;
+}
+
+.features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #333;
+  padding: 4em;
+  line-height: 1.5;
+}
+.features .features-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.features .features-head .features-heading {
+  margin-bottom: 5px;
+  font-size: 36px;
+  text-align: center;
+  line-height: 1.15;
+  font-weight: 700;
+}
+.features .features-head .features-head-text {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 50%;
+  margin: 0 auto 80px;
+}
+.features .features-list {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 auto;
+          flex: 0 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  margin-top: 2px;
+  padding: 20px;
+}
+.features .features-list .features-item {
+  width: 30%;
+  min-height: 360px;
+  margin: 15px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.features .features-list .features-item img {
+  max-width: 190px;
+  min-height: 190px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.features .features-list .features-item .features-item-text {
+  width: 80%;
+  margin: 0 auto;
+}
+.features .features-list .features-item .features-item-header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
 }

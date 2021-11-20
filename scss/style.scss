@@ -9,6 +9,9 @@ html {
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: Roboto, sans-serif;
+}
 ul {
   list-style: none;
 }
@@ -228,4 +231,77 @@ a {
 
 .about-item .about-text .about-heading p {
   width: 80%;
+}
+
+// features section
+
+.features {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  color: #333;
+  padding: 4em;
+  line-height: 1.5;
+
+  .features-head {
+    display: flex;
+    flex-direction: column;
+
+    .features-heading {
+      margin-bottom: 5px;
+      font-size: 36px;
+      text-align: center;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+    .features-head-text {
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.5;
+      width: 50%;
+      margin: 0 auto 80px;
+    }
+  }
+
+  .features-list {
+    width: 80%;
+    display: flex;
+    flex: 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 2px;
+    padding: 20px;
+
+    .features-item {
+      width: 30%;
+      min-height: 360px;
+      margin: 15px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        max-width: 190px;
+        min-height: 190px;
+        vertical-align: middle;
+        display: inline-block;
+      }
+      .features-item-text {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .features-item-header {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: bold;
+      }
+    }
+  }
 }
