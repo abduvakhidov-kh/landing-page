@@ -249,7 +249,11 @@
               class="features-item-img"
             />
             <h4 class="features-item-header">User Access Role</h4>
-            <p class="features-item-text">Submitting an application to study, on behalf of a student, is never a short process. Give yourself a break! Keep track of vital information such as task creation/completion date & time.</p>
+            <p class="features-item-text">
+              Submitting an application to study, on behalf of a student, is
+              never a short process. Give yourself a break! Keep track of vital
+              information such as task creation/completion date & time.
+            </p>
           </li>
           <li class="features-item">
             <img
@@ -281,55 +285,81 @@
 
         <!-- tool information -->
         <div class="features-tool">
-          <div class="feature-tool-about">
-            <h4 class="features-heading">
-              Performance Management Employees love
-            </h4>
-            <div class="advantage">
-              <h5 class="advantage-header">Refactor is simple</h5>
-              <p class="advantage-text">
-                Whether you're travelling or next to your home spot, always know
-                where the wind is the best. Get the latest forecast to choose
-                where to kite.
-              </p>
+          <div class="feature-tool-about about-item">
+            <div class="about-text">
+              <div class="about-heading">
+                <h2 class="about-header">
+                  Performance Management Employees love
+                </h2>
+                <p>
+                  Build a flexible culture with Kergan's first-of-its-kind
+                  people analytics platform.
+                </p>
+              </div>
+              <div class="advantage-group">
+                <div class="advantage">
+                  <h3 class="advantage-header">Refactor is simple</h3>
+                  <p class="advantage-text">
+                    Whether you're travelling or next to your home spot, always
+                    know where the wind is the best. Get the latest forecast to
+                    choose where to kite.
+                  </p>
+                </div>
+
+                <div class="advantage">
+                  <h3 class="advantage-header">Coding Bootcamp</h3>
+                  <p class="advantage-text">
+                    Easily discuss meeting points and rideshare from within the
+                    app. Make friends if you're new to town, or get an
+                    additional member to your crew.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="advantage">
-              <h5 class="advantage-header">Coding Bootcamp</h5>
-              <p class="advantage-text">
-                Easily discuss meeting points and rideshare from within the app.
-                Make friends if you're new to town, or get an additional member
-                to your crew.
-              </p>
-            </div>
+            <div class="space-block"></div>
           </div>
-          <div class="features-tool-slider">
-            <button class="slider-btn"></button>
-            <img
-              src="http://detheme.com/templates/kergan/images/satu-p-500.png"
-              alt="aa"
-              class="slider-img"
-            />
 
-            <img
-              src="http://detheme.com/templates/kergan/images/empat.jpg"
-              alt="asa"
-              class="slider-img"
-            />
+          <div class="slider" data-autoplay="true">
+            <div class="slide">
+              <img
+                src="http://detheme.com/templates/kergan/images/satu-p-500.png"
+                alt="aa"
+                class="slider-img"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="http://detheme.com/templates/kergan/images/empat.jpg"
+                alt="asa"
+                class="slider-img"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="http://detheme.com/templates/kergan/images/lima-p-500.jpeg"
+                alt="sas"
+                class="slider-img"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="http://detheme.com/templates/kergan/images/dua.jpg"
+                alt="ava"
+                class="slider-img"
+              />
+            </div>
 
-            <img
-              src="http://detheme.com/templates/kergan/images/lima-p-500.jpeg"
-              alt="sas"
-              class="slider-img"
-            />
-
-            <img
-              src="http://detheme.com/templates/kergan/images/dua.jpg"
-              alt="ava"
-              class="slider-img"
-            />
+            <button class="prev" onclick="prev()">
+              <i class="fa fa-angle-left"></i>
+            </button>
+            <button class="next" onclick="next()">
+              <i class="fa fa-angle-right"></i>
+            </button>
+            <div class="dots_container" id="indicator"></div>
           </div>
         </div>
       </div>
+
       <div class="comments">
         <button><i class="fa fa-angle-left"></i></button>
         <div class="comments-item">
@@ -423,5 +453,84 @@
         />
       </div>
     </footer>
+    <script>
+      var slide = document.getElementsByClassName("slide");
+      var indicator = document.getElementById("indicator");
+      var dots = document.getElementsByClassName("dots");
+      var autoplay = document
+        .getElementsByClassName("slider")[0]
+        .getAttribute("data-autoplay");
+      var l = slide.length;
+      var interval = 5000;
+      var set;
+
+      window.onload = function () {
+        initialize();
+        slide[0].style.opacity = "1";
+        for (var j = 0; j < l; j++) {
+          indicator.innerHTML +=
+            "<div class='dots' onclick=change(" + j + ")></div>";
+        }
+
+        dots[0].style.background = "#696969";
+      };
+
+      function initialize() {
+        if (autoplay === "true")
+          set = setInterval(function () {
+            next();
+          }, interval);
+      }
+
+      function change(index) {
+        clearInterval(set);
+        count = index;
+        for (var j = 0; j < l; j++) {
+          slide[j].style.opacity = "0";
+          dots[j].style.background = "#bdbdbd";
+        }
+        slide[count].style.opacity = "1";
+        dots[count].style.background = "#696969";
+      }
+
+      var count = 0;
+      function next() {
+        clearInterval(set);
+        slide[count].style.opacity = "0";
+        count++;
+        for (var j = 0; j < l; j++) {
+          dots[j].style.background = "#bdbdbd";
+        }
+
+        if (count == l) {
+          count = 0;
+          slide[count].style.opacity = "1";
+          dots[count].style.background = "#696969";
+        } else {
+          slide[count].style.opacity = "1";
+          dots[count].style.background = "#696969";
+        }
+        initialize();
+      }
+
+      function prev() {
+        clearInterval(set);
+        slide[count].style.opacity = "0";
+        for (var j = 0; j < l; j++) {
+          dots[j].style.background = "#bdbdbd";
+        }
+        count--;
+
+        if (count == -1) {
+          count = l - 1;
+          slide[count].style.opacity = "1";
+          dots[count].style.background = "#696969";
+        } else {
+          slide[count].style.opacity = "1";
+          dots[count].style.background = "#696969";
+        }
+        initialize();
+      }
+    </script>
   </body>
 </html>
